@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalPostMan - Админ панель</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="notebook-page">
+        <header class="header">
+            <a href="index.html" class="logo">PersonalPostMan</a>
+            <nav class="nav">
+                <a href="#" id="logoutBtn" class="login-btn">ВЫХОД</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </header>
+
+        <main class="main-content">
+            <h1>Административная панель</h1>
+            <p>Управление заказами и партнёрскими заявками</p>
+
+            <div class="admin-panel">
+                <h2>Заказы на доставку</h2>
+                <div class="order-list" id="ordersList">
+                    <!-- Заказы будут загружены через JavaScript -->
+                    <p>Загрузка заказов...</p>
+                </div>
+
+                <h2>Партнёрские заявки</h2>
+                <div class="order-list" id="partnersList">
+                    <!-- Заявки партнёров будут загружены через JavaScript -->
+                    <p>Загрузка заявок...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2020 - 2024 PersonalPostMan. Все права защищены.</p>
+                <p>Ваш надёжный партнёр в доставке</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

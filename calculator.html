@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PersonalPostMan - Расчёт доставки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="notebook-page">
+        <header class="header">
+            <a href="index.html" class="logo">PersonalPostMan</a>
+            <nav class="nav">
+                <a href="index.html">ГЛАВНАЯ</a>
+                <a href="services.html">УСЛУГИ</a>
+                <a href="calculator.html">РАСЧЁТ ДОСТАВКИ</a>
+                <a href="guarantee.html">ГАРАНТИИ</a>
+                <a href="partner.html">СТАТЬ ПАРТНЁРОМ</a>
+                <a href="contacts.html">КОНТАКТЫ</a>
+                <a href="login.html" class="login-btn">Админ</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </header>
+
+        <main class="main-content">
+            <h1>Калькулятор доставки</h1>
+            <p>Рассчитайте стоимость доставки и оформите заказ онлайн</p>
+
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="weight">Вес посылки (кг):</label>
+                    <input type="number" id="weight" class="form-control" min="0.1" step="0.1" value="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="distance">Расстояние (км):</label>
+                    <input type="number" id="distance" class="form-control" min="1" value="5">
+                </div>
+
+                <div class="form-group">
+                    <label for="urgency">Срочность:</label>
+                    <select id="urgency" class="form-control">
+                        <option value="1">Стандартная (2-3 дня)</option>
+                        <option value="1.5">Срочная (24 часа)</option>
+                        <option value="2">Экспресс (до 6 часов)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="insurance">Страхование:</label>
+                    <select id="insurance" class="form-control">
+                        <option value="0">Без страхования</option>
+                        <option value="50">Страхование 50 руб</option>
+                        <option value="100">Страхование 100 руб</option>
+                    </select>
+                </div>
+
+                <button id="calculateBtn" class="btn">Рассчитать стоимость</button>
+
+                <div class="calculator-result" id="result" style="display: none;">
+                    <h3>Предварительный расчёт</h3>
+                    <p>Стоимость доставки: <span id="totalPrice">0</span> руб</p>
+                    <p><small>*Окончательная стоимость может быть скорректирована после осмотра посылки</small></p>
+                </div>
+            </div>
+
+            <h2>Оформить заказ на доставку</h2>
+            <form id="deliveryForm" class="calculator-form">
+                <div class="form-group">
+                    <label for="phone">Ваш номер телефона:</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerName">Ваше ФИО:</label>
+                    <input type="text" id="customerName" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fromAddress">Адрес отправления:</label>
+                    <input type="text" id="fromAddress" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="recipientName">ФИО получателя:</label>
+                    <input type="text" id="recipientName" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="toAddress">Адрес получения:</label>
+                    <input type="text" id="toAddress" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="packageWeight">Вес посылки (кг):</label>
+                    <input type="number" id="packageWeight" class="form-control" min="0.1" step="0.1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryDate">Желаемая дата доставки:</label>
+                    <input type="date" id="deliveryDate" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Дополнительные примечания:</label>
+                    <textarea id="notes" class="form-control" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Оформить заказ</button>
+            </form>
+        </main>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <p>&copy; 2020 - 2024 PersonalPostMan. Все права защищены.</p>
+                <p>Ваш надёжный партнёр в доставке</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
